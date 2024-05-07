@@ -3,7 +3,7 @@ import UserCard from "../components/UserCard";
 import NavBar from "../components/NavBar";
 
 function Home() {
-  const [users, setUsers] = useState([]);
+  const userList = users.map(user => <UserCard key={user.id} user={user}/>);
 
   useEffect(() =>{
     fetch("http://localhost:4000/users")
